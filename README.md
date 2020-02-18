@@ -10,3 +10,7 @@ Spring contexts are also called Spring IoC containers, which are responsible for
 Spring Framework its responsible for instantiate all dependencies without our concern through IoC.
 
  
+**2 - Dependecy Injection**
+When you go and get things our of the regrigerator for yourself, you can cause problems. You might leave the door open, you might get something Mommy doesn't want you to have.
+You might even be looking for something we don't even have or which has expired.
+What you should be doing is stating a need: "I need something to drink with lunch" and then we will make sure you have something when you sit down to eat.
