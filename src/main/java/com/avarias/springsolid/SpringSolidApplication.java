@@ -1,5 +1,6 @@
 package com.avarias.springsolid;
 
+import com.avarias.springsolid.controllers.I18nController;
 import com.avarias.springsolid.controllers.MyController;
 import com.avarias.springsolid.controllers.PropertyInjectedController;
 import com.avarias.springsolid.controllers.SetterInjectedController;
@@ -14,10 +15,14 @@ public class SpringSolidApplication {
 
 		ApplicationContext ctx = SpringApplication.run(SpringSolidApplication.class, args);
 
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayGreeting());
+
+
 		MyController myController = (MyController) ctx.getBean("myController");
 
-		String greeting = myController.sayHello();
-		System.out.println(greeting);
+		System.out.println("---- primary bean");
+		System.out.println(myController.sayHello());
 
 
 		/**
