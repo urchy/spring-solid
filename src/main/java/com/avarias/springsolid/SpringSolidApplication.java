@@ -10,35 +10,34 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class SpringSolidApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		ApplicationContext ctx = SpringApplication.run(SpringSolidApplication.class, args);
+        ApplicationContext ctx = SpringApplication.run(SpringSolidApplication.class, args);
 
-		MyController myController = (MyController) ctx.getBean("myController");
+        MyController myController = (MyController) ctx.getBean("myController");
 
-		String greeting = myController.sayHello();
-		System.out.println(greeting);
-
-
-		/**
-		 * This will be injected by the framework.
-		 *
-		 * */
-		System.out.println("-----------PropertyInjectedController");
-
-		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
-		System.out.println(propertyInjectedController.getGreeting());
+        String greeting = myController.sayHello();
+        System.out.println(greeting);
 
 
-		/***
-		 * Using qualifiers
-		 * */
-		SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
-		System.out.println(setterInjectedController.getGreeting());
+        /**
+         * This will be injected by the framework.
+         *
+         * */
+        System.out.println("-----------PropertyInjectedController");
+
+        PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
+        System.out.println(propertyInjectedController.getGreeting());
 
 
+        /***
+         * Using qualifiers
+         * */
+        SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
+        System.out.println(setterInjectedController.getGreeting());
 
-	}
+
+    }
 
 
 }

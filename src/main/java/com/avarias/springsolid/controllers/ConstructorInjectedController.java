@@ -13,7 +13,7 @@ public class ConstructorInjectedController {
         this.greetingService = greetingService;
     }
 
-    public String getGreeting(){
-        return  greetingService.sayGreeting();
+    public String getGreeting() {
+        return greetingService.sayGreeting();
     }
 }

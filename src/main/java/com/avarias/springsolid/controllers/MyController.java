@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MyController {
 
-    public String sayHello(){
+    public String sayHello() {
 
         return "Hi Peeps";
     }
